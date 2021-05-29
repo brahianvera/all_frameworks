@@ -11,7 +11,9 @@ router.post("/datos-curso", article_controller.datos_curso);
 
 //Rutas utiles
 router.post('/save',article_controller.save);
-router.get('/articles',article_controller.get_articles);
+//La interrogacion indica que la varibale no es obligatoria
+router.get('/articles/:last?',article_controller.get_articles);
+router.get('/article/:id',article_controller.gatArticle);
 
 
 module.exports = router;

@@ -1,6 +1,8 @@
 'use strict'
 
+const { Query } = require('mongoose');
 var validator = require('validator');
+const article = require('../models/article');
 var Article = require('../models/article')
 
 var controller = {
@@ -67,10 +69,17 @@ var controller = {
         }
     },
     get_articles:(req,res )=>{
+
+        var  query =  Article.find({});
+        var last = req.params.last;
+        if(last || last != undefined){
+            query.limit(5);
+        };
+
         //Find
         // sort sirve para organizar los datos
         //find sirve para buscar en una base de datos
-        Article.find({}).sort('-_id').exec((err,articles)=>{
+        query.sort('-_id').exec((err,articles)=>{
             if(err){
                 return res.status(500).send({
                     status: 'error',
@@ -90,6 +99,37 @@ var controller = {
                 articles
             })
         });
+    },
+
+    gatArticle:(req, res)=>{
+
+        // Recoger el id del la url
+        var article_id = req.params.id;
+
+        // Comprobar que existe
+        if(!article_id || !article_id == null){
+            return res.status(404).send({
+                status: 'error',
+                message: 'No existe el articulo !!!'
+            });
+        }
+
+        //Buscar el articulo
+        Article.findById(article_id,(err,article)=>{
+            if(err || !article){
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'NO existe el articulo !!!'
+                });  
+            }
+            //Devolver json
+            return res.status(200).send({
+                status: 'success',
+                article
+            });
+        })
+
+        
     }
 }; //end controller
 
