@@ -101,7 +101,7 @@ var controller = {
         });
     },
 
-    gatArticle:(req, res)=>{
+    getArticle:(req, res)=>{
 
         // Recoger el id del la url
         var article_id = req.params.id;
@@ -130,6 +130,55 @@ var controller = {
         })
 
         
+    },
+
+    update:(req, res)=>{
+        //Recoger el id del articul
+        var article_id = req.params.id;
+
+        //Recoger los datos que llegan por put 
+        var  params = req.body;
+
+        //Validar datos
+        try{
+            var validate_title  = !validator.isEmpty(params.title);
+            var validate_content = !validator.isEmpty(params.content);
+        }catch(err){
+            return res.status(200).send({
+                status: 'error',
+                message: 'Faltan datos por enviar!!'
+            });    
+        }
+
+        if(validate_title && validate_content){
+            Article.findOneAndUpdate({_id:article_id},params,{new:true},
+            (err,articleupdated)=>{
+                if(err){
+                    return res.status(500).send({
+                        status: 'error',
+                        message: err
+                    });          
+                };
+                if(!articleupdated){
+                    return res.status(500).send({
+                        status: 'error',
+                        message: 'No existe el articulo'
+                    });  
+                }
+                return res.status(200).send({
+                    status: 'success',
+                    article: articleupdated
+                });
+            });
+        }else{
+            return res.status(200).send({
+                status: 'error',
+                message: 'La validacion no es correcta'
+            });     
+        }
+
+        //Fin update
+
     }
 }; //end controller
 

@@ -13,7 +13,7 @@ router.post("/datos-curso", article_controller.datos_curso);
 router.post('/save',article_controller.save);
 //La interrogacion indica que la varibale no es obligatoria
 router.get('/articles/:last?',article_controller.get_articles);
-router.get('/article/:id',article_controller.gatArticle);
-
+router.get('/article/:id',article_controller.getArticle);
+router.put('/article/:id',article_controller.update);
 
 module.exports = router;
