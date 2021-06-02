@@ -179,6 +179,30 @@ var controller = {
 
         //Fin update
 
+    },
+    delete:(req, res) => {
+        //Recoger el id de la url
+        var article_id = req.params.id
+        //Find and delete
+        Article.findOneAndDelete({_id:article_id}, (err, article_remove)=>{
+            if(err){
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'Error al borrar !!!'
+                });    
+            }else if(!article_remove){
+                console.log(article_remove);
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'No se ha borrado el articulo, posiblemente no exista!!!'
+                });   
+            }else{
+                return res.status(200).send({
+                    status: 'success',
+                    article: article_remove
+                }); 
+            }
+        });  
     }
 }; //end controller
 
