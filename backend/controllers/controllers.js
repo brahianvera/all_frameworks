@@ -203,6 +203,26 @@ var controller = {
                 }); 
             }
         });  
+    },
+
+    upload: (req,res)=>{
+
+        //configurar el modulo connect multiparty router/artcile.js
+
+        //Recoger el fichero de la petición
+
+        //Conseguir nombre y la extension del archivo
+
+        //Comprobar la extension de larchivo, solo imagenes, si es valido borrar el fichero
+
+        //si todo es valido 
+
+        //Buscar el articulo, asignarle el nombre de la imagen y actualizarlo
+
+        return res.status(404).send({
+            status: 'error',
+            message: ' ddfsd fNo se ha borrado el articulo, posiblemente no exista!!!'
+        });
     }
 }; //end controller
 
