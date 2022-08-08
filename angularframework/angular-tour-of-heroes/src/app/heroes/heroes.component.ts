@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
@@ -33,7 +34,7 @@ export class HeroesComponent implements OnInit {
 
   delete(hero: Hero): void{
     this.heroes = this.heroes.filter(h => h !== hero);
-    //subscribe is important to the request the method server.
+    //subscribe is important to the request the method server
     this.heroService.deleteHero(hero.id).subscribe();
   }
 
