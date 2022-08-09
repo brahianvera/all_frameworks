@@ -1,1 +1,15 @@
-<p>hero-search works!</p>
+<div id="search-component">
+    <label for="search-box">Hero Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+    <ul>
+        <!-- the dollar simbol after the heroes var his meaning is that is an observable, not an array,
+            so ngFor can't do anything with an Observable, for the ngFor works you net to put 
+            the | and after that put the async that works whit observable and subscribe that automatically  to the observable
+        -->
+        <li *ngFor="let hero of heroes$ | async ">
+            <a routerLink="/detail/{{hero.id}}">
+                {{hero.name}}
+            </a>
+        </li>
+    </ul>
+</div>
