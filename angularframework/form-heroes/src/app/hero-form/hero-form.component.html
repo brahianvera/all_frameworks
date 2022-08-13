@@ -1,1 +1,19 @@
-<p>hero-form works!</p>
+<div class="container">
+    <h1> Hero Form </h1>
+    <div class="form-group">
+        <label>Name</label>
+        <input  type=text name="name" required class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label> Alter Ego </label>
+        <input  type=text name="Alter Ego" required class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Hero Power</label>
+        <select class="form-control" id="power" required>
+            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+    </div>
+</div>
