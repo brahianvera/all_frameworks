@@ -11,7 +11,7 @@
                 #name="ngModel">
             <!-- Is important to use #name="ngModel" because this binding  with the below div and 
              helps to show the user what is bad  -->
-            <div [hidden]="name.valid || name.dirty" class="alert alert-danger">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 Name is required
             </div>
         </div>
@@ -23,9 +23,11 @@
 
         <div class="form-group">
             <label for="power"> Hero Power</label>
-            <select class="form-control ng-untouched ng-pristine ng-valid" id="power" required [(ngModel)]="model.power" name="power">
+            <select class="form-control ng-untouched ng-pristine ng-valid" id="power" required [(ngModel)]="model.power" name="power" #power="ngModel">
                 <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
             </select>
+            <div [hidden]="power.valid || power.pristine">
+            </div>
         </div>
 
         <button type="button" class="btn btn-default" (click)="newHero();heroForm.reset()"> New Hero</button>
