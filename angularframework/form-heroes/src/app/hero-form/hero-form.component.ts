@@ -12,7 +12,7 @@ export class HeroFormComponent  {
     "Really Smart", "Super Flexible",
     "Super Hot", "Weather Changer"
   ]
-
+  
   model = new Hero(18,"Dr IQ", this.powers[0],"Chuck Overstreet");
 
   submitted = false;
@@ -22,4 +22,5 @@ export class HeroFormComponent  {
   newHero() {
     this.model = new Hero(42,'','');
   }
+  
 }
