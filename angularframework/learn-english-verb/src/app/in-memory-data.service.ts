@@ -15,6 +15,11 @@ export class InMemoryDataService implements InMemoryDbService{
           past: "was/were",
           past_part:"been"
         },
+        statments:{
+          past: "i was in paris - france",
+          present: "i am in paris - france",
+          future:"i will in paris - france"
+        },
         url:"video/img.src"
       },
       { id:2, 
@@ -22,6 +27,11 @@ export class InMemoryDataService implements InMemoryDbService{
           present:"play",
           past: "played",
           past_part:"played"
+        },
+        statments:{
+          past: "i played soccer with my brothers",
+          present: "i play soccer every sunday",
+          future:"i will play soccer with my brothers"
         },
         url:"video/played.src"
       }

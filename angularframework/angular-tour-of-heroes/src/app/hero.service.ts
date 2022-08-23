@@ -16,7 +16,7 @@ export class HeroService {
 
   httpOptions = {
     headers : new HttpHeaders({'Content-Type':'application/json'})
-  }
+  } 
   private heroesUrl = 'api/heroes';
 
   constructor(private http: HttpClient,
