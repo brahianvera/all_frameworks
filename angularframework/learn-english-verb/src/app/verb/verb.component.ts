@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Verb } from '../verb';
 
 @Component({
@@ -7,13 +7,7 @@ import { Verb } from '../verb';
   styleUrls: ['./verb.component.css']
 })
 export class VerbComponent implements OnInit {
-
-  verb: Verb = {
-      img:"hs",
-      present:"how",
-      past:"nice",
-      past_part:"party"
-  }
+  verb:Verb;
 
   constructor() { }
 
