@@ -9,7 +9,7 @@ import { VerbService } from '../verb.service';
   styleUrls: ['./verb.component.css']
 })
 export class VerbComponent implements OnInit {
-  @Input() verb?:Verb;
+  @Input() verb?: Verb;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +27,7 @@ export class VerbComponent implements OnInit {
     // the this.verb is a verb of this class 
     // the las verb is the parameter previously give to function arrow
     this.verbService.getVerb(id).subscribe(verb => this.verb = verb);
+    console.log(this.verb);
   }
 
 }

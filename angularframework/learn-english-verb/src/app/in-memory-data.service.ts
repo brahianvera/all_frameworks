@@ -1,12 +1,14 @@
-import { Injectable, VERSION } from '@angular/core';
-import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
+import { Injectable } from '@angular/core';
 import { Verb } from './verb';
 
  @Injectable({
   providedIn: 'root'
  })
 
-export class InMemoryDataService implements InMemoryDbService{
+export class InMemoryDataService {
+
+  constructor() { }
+
   createDb(){
     const verbs = [
       { id:1, 
@@ -36,7 +38,7 @@ export class InMemoryDataService implements InMemoryDbService{
         url:"video/played.src"
       }
     ]
-    return verbs;
+    return {verbs:verbs};
   }
   
   //gEN
