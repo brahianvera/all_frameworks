@@ -15,9 +15,12 @@ export class VerbService {
   private verbsUrl = "api/verbs";
   constructor(private http: HttpClient) { }
 
+  getVerbs(): Observable<Verb[]>{
+      return this.http.get<Verb[]>(this.verbsUrl);
+  }
 
   getVerb(id: number): Observable<Verb>{
-    const url =`${this.verbsUrl}`;
+    const url =`${this.verbsUrl}/${id}`;
     return this.http.get<Verb>(url);
   }
 }

@@ -12,7 +12,7 @@ export class InMemoryDataService {
   createDb(){
     const verbs = [
       { id:1, 
-        verb:{
+        times:{
           present:"be",
           past: "was/were",
           past_part:"been"
@@ -25,7 +25,7 @@ export class InMemoryDataService {
         url:"video/img.src"
       },
       { id:2, 
-        verb:{
+        times:{
           present:"play",
           past: "played",
           past_part:"played"

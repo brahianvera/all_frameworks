@@ -1,17 +1,18 @@
 <div *ngIf="verb">
-    <h2>{{verb.present}}</h2>
-    <img src="{{verb.img}}" />
+    {{console.log(verb)}}
+    <h2>{{verb.times.present}}</h2>
+    <img src="{{verb.url}}" />
     <div class="verb_times">
         <div>
-            {{verb.past}}
+            {{verb.times.past}}
         </div>
 
         <div>
-            {{verb.present}}
+            {{verb.times.present}}
         </div>
 
         <div>
-            {{verb.past_part}}
+            {{verb.times.past_part}}
         </div>
     </div>
 </div>

@@ -10,6 +10,8 @@ import { VerbService } from '../verb.service';
 })
 export class VerbComponent implements OnInit {
   @Input() verb?: Verb;
+  verbs: Verb[]  = [];
+  console = console;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,16 +20,19 @@ export class VerbComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getHero();
+    this.getVerb();
   }
 
-  getHero(): void{
+  getVerbs(): void{
+    this.verbService.getVerbs().subscribe(Verbs =>   this.verbs = Verbs);
+  }
+
+  getVerb(): void{
     const id = Number(this.route.snapshot.paramMap.get('id'));
     // the verb brefore at the equal an lower sing means that is a parameter of a arrow function
     // the this.verb is a verb of this class 
     // the las verb is the parameter previously give to function arrow
     this.verbService.getVerb(id).subscribe(verb => this.verb = verb);
-    console.log(this.verb);
   }
 
 }
