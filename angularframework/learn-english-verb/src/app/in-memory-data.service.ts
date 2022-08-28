@@ -22,7 +22,7 @@ export class InMemoryDataService {
           present: "i am in paris - france",
           future:"i will in paris - france"
         },
-        url:"video/img.src"
+        url:"../assets/img/verbs/be.png"
       },
       { id:2, 
         times:{
