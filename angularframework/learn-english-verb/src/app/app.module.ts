@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 //TO WORK WITH A DUMMY APPI.
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { VerbsTimesComponent } from './verbs-times/verbs-times.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VerbComponent
+    VerbComponent,
+    VerbsTimesComponent
   ],
   imports: [
     BrowserModule,
