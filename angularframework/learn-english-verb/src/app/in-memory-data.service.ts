@@ -13,7 +13,7 @@ export class InMemoryDataService {
     const verbs = [
       { id:1, 
         times:{
-          present:"be",
+          present:"BE",
           past: "was/were",
           past_part:"been"
         },

@@ -1,7 +1,7 @@
-<div *ngIf="verb">
-    {{console.log(verb)}}
-    <h2>{{verb.times.present}}</h2>
-    <img src="{{verb.url}}" />
+<div *ngIf="verb" class="verb">
+    <h2 class="title">{{verb.times.present}}</h2>
+    <!-- other component-->
+    <img src="{{verb.url}}" class="img_acomp" />
     <div class="verb_times">
         <div>
             {{verb.times.past}}
@@ -15,19 +15,22 @@
             {{verb.times.past_part}}
         </div>
     </div>
-    <h2>Statments</h2>
-    <div>
+    <!-- part of the other component -->
+    <!-- 
+        <h2>Statments</h2>
         <div>
-            <h4> Past </h4>
-            <div> {{verb.statments.past}} </div>
+            <div>
+                <h4> Past </h4>
+                <div> {{verb.statments.past}} </div>
+            </div>
+            <div>
+                <h4> Present </h4>
+                <div> {{verb.statments.present}}</div>
+            </div>
+            <div>
+                <h4> Future </h4>
+                <div> {{verb.statments.future}} </div>
+            </div>
         </div>
-        <div>
-            <h4> Present </h4>
-            <div> {{verb.statments.present}}</div>
-        </div>
-        <div>
-            <h4> Future </h4>
-            <div> {{verb.statments.future}} </div>
-        </div>
-    </div>
+    -->
 </div>
