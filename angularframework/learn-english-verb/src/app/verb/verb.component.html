@@ -2,18 +2,5 @@
     <h2 class="title">{{verb.times.present}}</h2>
     <!-- other component-->
     <img src="{{verb.url}}" class="img_acomp" />
-    <div class="verb_times">
-        <div>
-            {{verb.times.past}}
-        </div>
-
-        <div>
-            {{verb.times.present}}
-        </div>
-
-        <div>
-            {{verb.times.past_part}}
-        </div>
-    </div>
     <app-verbs-times [times]="verb.times"></app-verbs-times>
 </div>
