@@ -7,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VerbsTimesComponent implements OnInit {
 
-  @Input() times = {};
+  @Input() times? : {
+    present: string,
+    past: string,
+    past_part: string
+
+  };
   
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

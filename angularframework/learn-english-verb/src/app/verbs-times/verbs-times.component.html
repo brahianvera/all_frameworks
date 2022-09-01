@@ -1,1 +1,12 @@
-<p>{{times}}</p>
+<div *ngIf="times">
+    <div>
+        {{times.past}}
+    </div>
+    <div>
+        {{times.present}}
+        
+    </div>
+    <div>
+        {{times.past_part}}
+    </div>
+</div>
