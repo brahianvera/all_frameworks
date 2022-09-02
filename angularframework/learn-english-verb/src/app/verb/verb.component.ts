@@ -29,9 +29,9 @@ export class VerbComponent implements OnInit {
 
   getVerb(): void{
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    // the verb brefore at the equal an lower sing means that is a parameter of a arrow function
+    // the word "verb" before at the equal an lower sing means that is a parameter of a arrow function
     // the this.verb is a verb of this class 
-    // the las verb is the parameter previously give to function arrow
+    // the last verb is the parameter previously give to function arrow
     this.verbService.getVerb(id).subscribe(verb => this.verb = verb);
   }
 
