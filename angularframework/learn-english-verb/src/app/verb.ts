@@ -8,7 +8,7 @@ export interface Verb{
     statments:{
         past: string,
         present: string,
-        future: string
+        past_part: string
     }
     url: string
 }

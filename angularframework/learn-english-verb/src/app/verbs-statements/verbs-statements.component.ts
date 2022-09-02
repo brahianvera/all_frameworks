@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-verbs-statements',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerbsStatementsComponent implements OnInit {
 
+  @Input() staments?: {
+    past: string,
+    present: string,
+    past_part: string
+  };
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

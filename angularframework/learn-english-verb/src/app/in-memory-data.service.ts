@@ -18,9 +18,9 @@ export class InMemoryDataService {
           past_part:"been"
         },
         statments:{
-          past: "i was in paris - france",
-          present: "i am in paris - france",
-          future:"i will in paris - france"
+          past: "i was in paris france",
+          present: "i am in paris france",
+          past_part:"i have been in paris france"
         },
         url:"../assets/img/verbs/be.png"
       },
@@ -33,7 +33,7 @@ export class InMemoryDataService {
         statments:{
           past: "i played soccer with my brothers",
           present: "i play soccer every sunday",
-          future:"i will play soccer with my brothers"
+          past_part:"i have been playing soccer with my brothers"
         },
         url:"video/played.src"
       }
