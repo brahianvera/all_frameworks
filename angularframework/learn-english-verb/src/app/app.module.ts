@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { VerbsTimesComponent } from './verbs-times/verbs-times.component';
+import { VerbsStatementsComponent } from './verbs-statements/verbs-statements.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VerbComponent,
-    VerbsTimesComponent
+    VerbsTimesComponent,
+    VerbsStatementsComponent
   ],
   imports: [
     BrowserModule,
