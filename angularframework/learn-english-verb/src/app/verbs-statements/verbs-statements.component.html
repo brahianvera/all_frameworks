@@ -1,11 +1,21 @@
-<div *ngIf="staments" class="statment">
-    <div>
-        {{staments.past}}
+<div *ngIf="staments" class="statments">
+    <h2>Prhases</h2>
+    <div class="statement">
+        <div class="time_verb">Past</div>
+        <div class="example">
+            {{staments.past}}
+        </div>
     </div>
-    <div>
-        {{staments.present}}
+    <div class="statement">
+        <div class="time_verb">Present</div>
+        <div class="example">
+            {{staments.present}}
+        </div>
     </div>
-    <div>
-        {{staments.past_part}}
+    <div class="statement">
+        <div class="time_verb">Present Perfect</div>
+        <div class="example">
+            {{staments.past_part}}
+        </div>
     </div>
 </div>

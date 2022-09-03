@@ -1,26 +1,26 @@
 <div *ngIf="times" class="verbs_time">
     <div class="block_verb">
         <div class="title_time">
-            Past
+            PAST
         </div>
         <div class="verb">    
-            {{times.past | uppercase}}
+            {{times.past }}
         </div>
     </div>
     <div class="block_verb">
         <div class="title_time">
-            Present
+            PRESENT
         </div>
         <div class="verb">
-            {{times.present | uppercase}}      
+            {{times.present | lowercase}}      
         </div>
     </div>
     <div class="block_verb">
         <div class="title_time">
-            Past Participle
+            PRESENT PERFECT
         </div>
         <div class="verb">
-            {{times.past_part | uppercase}}
+            {{times.past_part}}
         </div>
     </div>
 </div>

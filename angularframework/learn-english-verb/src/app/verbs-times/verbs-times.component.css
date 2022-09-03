@@ -1,7 +1,8 @@
 .verbs_time{
     display: flex;
     justify-content: center;
-    padding-bottom:  10px;
+    padding-bottom:  5px;
+    padding-top: 10px;
     margin-top: 5px
 }
 .block_verb{
@@ -13,7 +14,6 @@
     font-size: 18px;
     border-bottom: 1px solid black;
     padding-bottom: 5px;
-    margin-bottom: 5px;
 }
 .verb{
     color: white;

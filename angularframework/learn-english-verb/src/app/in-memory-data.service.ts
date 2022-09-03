@@ -20,7 +20,7 @@ export class InMemoryDataService {
         statments:{
           past: "i was in paris france",
           present: "i am in paris france",
-          past_part:"i have been in paris france"
+          past_part:"i have been in paris france since 1984"
         },
         url:"../assets/img/verbs/be.png"
       },

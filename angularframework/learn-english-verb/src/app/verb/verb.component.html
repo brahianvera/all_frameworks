@@ -3,5 +3,6 @@
     <!-- other component-->
     <img src="{{verb.url}}" class="img_acomp" />
     <app-verbs-times [times]="verb.times"></app-verbs-times>
+    <app-verbs-statements *ngIf="verb" [staments]="verb.statments"></app-verbs-statements>
 </div>
-<app-verbs-statements *ngIf="verb" [staments]="verb.statments"></app-verbs-statements>
+

@@ -1,0 +1,23 @@
+.statments{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    color: white;
+}
+.statement{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.statement .example{
+    margin-left: 15px;
+}
+h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.statement{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
