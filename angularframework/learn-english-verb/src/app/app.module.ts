@@ -11,13 +11,15 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { VerbsTimesComponent } from './verbs-times/verbs-times.component';
 import { VerbsStatementsComponent } from './verbs-statements/verbs-statements.component';
+import { VerbsListComponent } from './verbs-list/verbs-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VerbComponent,
     VerbsTimesComponent,
-    VerbsStatementsComponent
+    VerbsStatementsComponent,
+    VerbsListComponent
   ],
   imports: [
     BrowserModule,
