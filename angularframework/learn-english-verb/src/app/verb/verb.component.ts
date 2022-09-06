@@ -11,7 +11,6 @@ import { VerbService } from '../verb.service';
 export class VerbComponent implements OnInit {
   @Input() verb?: Verb;
   verbs: Verb[]  = [];
-  console = console;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,9 +22,6 @@ export class VerbComponent implements OnInit {
     this.getVerb();
   }
 
-  getVerbs(): void{
-    this.verbService.getVerbs().subscribe(Verbs =>   this.verbs = Verbs);
-  }
 
   getVerb(): void{
     const id = Number(this.route.snapshot.paramMap.get('id'));

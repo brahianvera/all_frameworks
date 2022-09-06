@@ -11,13 +11,14 @@ import { Verb } from '../verb';
 export class VerbsListComponent implements OnInit {
 
   verbs: Verb[] = [];
+  console= console;
   //inject code in the constructor, dependency injection
   constructor(
     private verbService: VerbService
   ) { }
 
   ngOnInit(): void {
-
+    this.getVerbs();
   }
 
   getVerbs(): void{

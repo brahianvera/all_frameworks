@@ -1,1 +1,7 @@
-<p>verbs-list works!</p>
+<div class="listVerbs">
+    <ul>
+        <li *ngFor="let verb of verbs">
+            {{verb.times.present}}
+        </li>
+    </ul>
+</div>
