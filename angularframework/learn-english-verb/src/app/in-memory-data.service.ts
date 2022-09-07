@@ -15,12 +15,12 @@ export class InMemoryDataService {
         times:{
           present:"BE",
           past: "was/were",
-          past_part:"been"
+          present_perfec:"been"
         },
         statments:{
           past: "i was in paris france",
           present: "i am in paris france",
-          past_part:"i have been in paris france since 1984"
+          present_perfec:"i have been in paris france since 1984"
         },
         url:"../assets/img/verbs/be.png"
       },
@@ -28,14 +28,14 @@ export class InMemoryDataService {
         times:{
           present:"play",
           past: "played",
-          past_part:"played"
+          present_perfec:"played"
         },
         statments:{
-          past: "i played soccer with my brothers",
-          present: "i play soccer every sunday",
-          past_part:"i have been played soccer with my brothers"
+          past: "he played soccer with my brothers last sunday",
+          present: "he plays soccer every sunday",
+          present_perfec:"he has been played soccer with my brothers"
         },
-        url:"video/played.src"
+        url:"../assets/img/verbs/play.jpg"
       }
     ]
     return {verbs:verbs};

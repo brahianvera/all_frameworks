@@ -1,7 +1,7 @@
 <div class="listVerbs">
     <ul>
         <li *ngFor="let verb of verbs">
-            {{verb.times.present}}
+            <a href="verb/{{verb.id}}">{{verb.times.present}}</a>
         </li>
     </ul>
 </div>

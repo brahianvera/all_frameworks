@@ -3,12 +3,12 @@ export interface Verb{
     times:{
         present:string,
         past: string,
-        past_part:string
+        present_perfec:string
     }
     statments:{
         past: string,
         present: string,
-        past_part: string
+        present_perfec: string
     }
     url: string
 }

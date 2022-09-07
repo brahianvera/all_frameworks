@@ -10,7 +10,7 @@ export class VerbsTimesComponent implements OnInit {
   @Input() times? : {
     present: string,
     past: string,
-    past_part: string
+    present_perfec: string
 
   };
   

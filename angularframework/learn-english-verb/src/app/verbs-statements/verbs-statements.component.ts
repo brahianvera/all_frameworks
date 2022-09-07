@@ -10,7 +10,7 @@ export class VerbsStatementsComponent implements OnInit {
   @Input() staments?: {
     past: string,
     present: string,
-    past_part: string
+    present_perfec: string
   };
 
   constructor() { }
