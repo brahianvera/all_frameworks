@@ -26,7 +26,7 @@ export class InMemoryDataService {
       },
       { id:2, 
         times:{
-          present:"play",
+          present:"PLAY",
           past: "played",
           present_perfec:"played"
         },
