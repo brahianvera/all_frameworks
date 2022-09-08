@@ -12,6 +12,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { VerbsTimesComponent } from './verbs-times/verbs-times.component';
 import { VerbsStatementsComponent } from './verbs-statements/verbs-statements.component';
 import { VerbsListComponent } from './verbs-list/verbs-list.component';
+import { NewVerbComponent } from './new-verb/new-verb.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { VerbsListComponent } from './verbs-list/verbs-list.component';
     VerbComponent,
     VerbsTimesComponent,
     VerbsStatementsComponent,
-    VerbsListComponent
+    VerbsListComponent,
+    NewVerbComponent
   ],
   imports: [
     BrowserModule,
