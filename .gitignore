@@ -1,3 +1,4 @@
 backend/node_modules
 webpack/node_modules/*
+webpack/dist/*
 webpack/node_modules/.package-lock.json
